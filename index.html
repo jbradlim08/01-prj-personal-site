@@ -40,27 +40,43 @@
   </section>
 
   <section id="skills" class="skills">
-    <h2>Art Skills</h2>
-    <div class="skills-wrapper">
-      <a class="scroll-btn left" href="#skill-1" aria-label="Scroll left"><i class="fa-solid fa-angle-left"></i></a>
-      <div class="skills-track">
-        <article id="skill-1" class="skill-card">
-          <img src="img/laptop.jpg" alt="Pixel art example">
-          <h3>Pixel Art</h3>
-          <p>Small, detailed sprites and scenes.</p>
-        </article>
-        <article id="skill-2" class="skill-card">
-          <img src="img/hero-bg.jpg" alt="2D art example">
-          <h3>2D Art</h3>
-          <p>Character sketches and illustrations.</p>
-        </article>
-        <article id="skill-3" class="skill-card">
-          <img src="img/laptop.jpg" alt="3D art example">
-          <h3>3D Art</h3>
-          <p>Simple models and low-poly scenes.</p>
-        </article>
+    <div class="skills-inner">
+      <h2>Art Skills</h2>
+      <div class="skills-wrapper">
+        <button class="scroll-btn left" type="button" aria-label="Scroll left">
+          <i class="fa-solid fa-angle-left"></i>
+        </button>
+        <div class="skills-track" id="skills-track">
+          <article id="skill-1" class="skill-card">
+            <img src="img/laptop.jpg" alt="Pixel art example">
+            <h3>Pixel Art</h3>
+            <p>Small, detailed sprites and scenes.</p>
+          </article>
+          <article id="skill-2" class="skill-card">
+            <img src="img/hero-bg.jpg" alt="2D art example">
+            <h3>2D Art</h3>
+            <p>Character sketches and illustrations.</p>
+          </article>
+          <article id="skill-3" class="skill-card">
+            <img src="img/laptop.jpg" alt="3D art example">
+            <h3>3D Art</h3>
+            <p>Simple models and low-poly scenes.</p>
+          </article>
+          <article id="skill-4" class="skill-card">
+            <img src="img/hero-bg.jpg" alt="Concept art example">
+            <h3>Concept Art</h3>
+            <p>Quick ideas and mood sketches.</p>
+          </article>
+          <article id="skill-5" class="skill-card">
+            <img src="img/laptop.jpg" alt="Animation example">
+            <h3>Animation</h3>
+            <p>Short loops and motion tests.</p>
+          </article>
+        </div>
+        <button class="scroll-btn right" type="button" aria-label="Scroll right">
+          <i class="fa-solid fa-angle-right"></i>
+        </button>
       </div>
-      <a class="scroll-btn right" href="#skill-3" aria-label="Scroll right"><i class="fa-solid fa-angle-right"></i></a>
     </div>
   </section>
 
@@ -85,5 +101,19 @@
   <footer id="contact" class="footer">
     <p>Email: youremail@example.com</p>
   </footer>
+
+  <script>
+    const track = document.getElementById("skills-track");
+    const leftBtn = document.querySelector(".scroll-btn.left");
+    const rightBtn = document.querySelector(".scroll-btn.right");
+
+    leftBtn.addEventListener("click", () => {
+      track.scrollBy({ left: -320, behavior: "smooth" });
+    });
+
+    rightBtn.addEventListener("click", () => {
+      track.scrollBy({ left: 320, behavior: "smooth" });
+    });
+  </script>
 </body>
 </html>
