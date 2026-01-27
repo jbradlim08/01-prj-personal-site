@@ -1,1 +1,199 @@
-/* Add you CSS here */
+:root {
+  --bg: #f5f2ec;
+  --dark: #1b1b1b;
+  --accent: #f2a03d;
+  --card: #ffffff;
+}
+
+/* base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Georgia", "Times New Roman", serif;
+  background: var(--bg);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* navbar */
+.site-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 32px;
+  background: #fff7e8;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.nav a {
+  margin-left: 16px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.2s ease;
+}
+
+.nav a:hover {
+  color: var(--accent);
+}
+
+/* hero */
+.hero {
+  min-height: 70vh;
+  background: url("img/hero-bg.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 64px 32px;
+}
+
+.hero-content {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 32px;
+  max-width: 520px;
+  border-radius: 10px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 16px;
+  background: var(--accent);
+  color: #2b1b00;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+/* bio */
+.bio {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 24px;
+  padding: 48px 32px;
+  align-items: center;
+}
+
+.bio img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* art skills */
+.skills {
+  padding: 48px 32px;
+}
+
+.skills h2 {
+  margin-bottom: 16px;
+}
+
+.skills-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.skills-track {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 8px 0;
+}
+
+.skill-card {
+  min-width: 260px;
+  background: var(--card);
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  scroll-snap-align: start;
+}
+
+.skill-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.scroll-btn {
+  background: var(--accent);
+  color: #2b1b00;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+/* programming languages */
+.languages {
+  padding: 48px 32px;
+}
+
+.language-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+}
+
+.language-card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  font-size: 18px;
+}
+
+.language-card i {
+  font-size: 32px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* footer */
+.footer {
+  text-align: center;
+  padding: 24px 16px 40px;
+  color: #5a4a36;
+}
+
+/* responsive */
+@media (max-width: 700px) {
+  .bio {
+    grid-template-columns: 1fr;
+  }
+  .nav {
+    display: none;
+  }
+}

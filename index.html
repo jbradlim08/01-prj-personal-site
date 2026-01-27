@@ -2,10 +2,88 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Personal Site</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <!-- Add your HTML content here -->
+  <header class="site-header">
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#languages">Languages</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Hello, I'm Javier</h1>
+      <p>I'm learning web development and building projects this semester.</p>
+      <a class="btn" href="#skills">See My Skills</a>
+    </div>
+  </section>
+
+  <section id="about" class="bio">
+    <div class="bio-image">
+      <img src="img/PhotoProfile.jpg" alt="Profile photo">
+    </div>
+    <div class="bio-text">
+      <h2>About Me</h2>
+      <p>
+        I'm a college student creating my first portfolio site. I like digital art,
+        pixel art, and 3D modeling. This site will grow as I make more projects.
+      </p>
+    </div>
+  </section>
+
+  <section id="skills" class="skills">
+    <h2>Art Skills</h2>
+    <div class="skills-wrapper">
+      <a class="scroll-btn left" href="#skill-1" aria-label="Scroll left"><i class="fa-solid fa-angle-left"></i></a>
+      <div class="skills-track">
+        <article id="skill-1" class="skill-card">
+          <img src="img/laptop.jpg" alt="Pixel art example">
+          <h3>Pixel Art</h3>
+          <p>Small, detailed sprites and scenes.</p>
+        </article>
+        <article id="skill-2" class="skill-card">
+          <img src="img/hero-bg.jpg" alt="2D art example">
+          <h3>2D Art</h3>
+          <p>Character sketches and illustrations.</p>
+        </article>
+        <article id="skill-3" class="skill-card">
+          <img src="img/laptop.jpg" alt="3D art example">
+          <h3>3D Art</h3>
+          <p>Simple models and low-poly scenes.</p>
+        </article>
+      </div>
+      <a class="scroll-btn right" href="#skill-3" aria-label="Scroll right"><i class="fa-solid fa-angle-right"></i></a>
+    </div>
+  </section>
+
+  <section id="languages" class="languages">
+    <h2>Programming Languages</h2>
+    <div class="language-grid">
+      <div class="language-card">
+        <i class="fa-brands fa-html5"></i>
+        <span>HTML</span>
+      </div>
+      <div class="language-card">
+        <i class="fa-brands fa-css3-alt"></i>
+        <span>CSS</span>
+      </div>
+      <div class="language-card">
+        <i class="fa-brands fa-js"></i>
+        <span>JavaScript</span>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact" class="footer">
+    <p>Email: youremail@example.com</p>
+  </footer>
 </body>
 </html>
