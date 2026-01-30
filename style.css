@@ -12,6 +12,21 @@
   --shadow-medium: rgba(0, 0, 0, 0.12);
 }
 
+/*dark theme*/
+body.dark {
+  --bg: #141414;
+  --dark: #f3f3f3;
+  --accent: #ffb347;
+  --card: #1f1f1f;
+  --nav-bg: #1a1a1a;
+  --skills-bg: #1b1b1b;
+  --hero-overlay: rgba(0, 0, 0, 0.5);
+  --accent-text: #1b1200;
+  --footer-text: #c9c0b6;
+  --shadow-light: rgba(0, 0, 0, 0.5);
+  --shadow-medium: rgba(0, 0, 0, 0.6);
+}
+
 /* base */
 * {
   box-sizing: border-box;
@@ -236,6 +251,26 @@ h2 {
   color: var(--footer-text);
   width: 80%;
   margin: 0 auto;
+}
+
+/* theme toggle overlay */
+.theme-toggle {
+  position: fixed;
+  right: 0;
+  top: 5.5em;
+  transform: none;
+  background: #ffffff;
+  color: #1b1b1b;
+  border: none;
+  border-radius: 999px 0 0 999px;
+  padding: 0.75em 0.9em;
+  box-shadow: 0 0.375em 1em var(--shadow-light);
+  cursor: pointer;
+  z-index: 20;
+}
+
+.theme-toggle i {
+  font-size: 1.4em;
 }
 
 /* responsive */

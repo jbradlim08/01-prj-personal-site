@@ -21,6 +21,11 @@
     </nav>
   </header>
 
+  <!-- THEME TOGGLE -->
+  <button class="theme-toggle" type="button" aria-label="Toggle dark theme">
+    <i class="fa-solid fa-lightbulb"></i>
+  </button>
+
   <!-- HERO -->
   <section id="home" class="hero">
     <div class="hero-content">
@@ -134,6 +139,7 @@
     <p>jbradlim1@hawk.illinoistech.edu</p>
   </footer>
 
+
   <!-- SCRIPTS for skills scrolling -->
   <script>
     const track = document.getElementById("skills-track");
@@ -148,6 +154,11 @@
     // Scroll right if clicked
     rightBtn.addEventListener("click", () => {
       track.scrollBy({ left: 320, behavior: "smooth" });
+    });
+
+    const themeToggle = document.querySelector(".theme-toggle");
+    themeToggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
     });
   </script>
 </body>
