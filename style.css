@@ -154,6 +154,15 @@ h2 {
   text-align: center;
 }
 
+.skills-row {
+  margin-bottom: 2em;
+}
+
+.skills-row-title {
+  margin-bottom: 0.75em;
+  text-align: center;
+}
+
 .skills-inner {
   width: 80%;
   margin: 0 auto;
